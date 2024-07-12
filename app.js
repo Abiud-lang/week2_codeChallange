@@ -1,35 +1,37 @@
-const list = document.querySelector('ul')
-const input = document.querySelector('input')
-const button = document.querySelector('button')
+const list = document.querySelector('ul');
+const input = document.querySelector('input');
+const button = document.querySelector('button');
 
-button.onclick = function ()
-{
-    let newItem= input.value
+button.addEventListener('click', () => {
+    const newItem = input.value;
+    if (newItem === '') return; // Do nothing if the input is empty
+
+    const itemList = document.createElement('li');
+
+    const itemText = document.createElement('span');
+    itemText.textContent = newItem;
+    itemList.appendChild(itemText);
+
+    const itemDelete = document.createElement('button');
+    itemDelete.textContent = 'Delete';
+    itemList.appendChild(itemDelete);
+
+    const itemPurchase = document.createElement('button');
+    itemPurchase.textContent = 'Purchased';
+    itemList.appendChild(itemPurchase);
+
+    list.appendChild(itemList);
+
+    // Clear the input
     input.value = '';
 
+    // Add event listener to the delete button
+    itemDelete.addEventListener('click', () => {
+        list.removeChild(itemList);
+    });
 
-let itemList = document.createElement('li')
-
-
-let itemText = document.createElement('span')
-itemText.textContent = newItem
-itemList.appendChild(itemText)
-
-let itemDelete = document.createElement('button')
-itemDelete.textContent = 'Delete'
-itemList.appendChild(itemDelete)
-
-
-list.appendChild(itemList)
-
-itemDelete.onclick = function () {
-    list.removeChild(itemList)
-
-
-    
-}
-
-}
-
-
-
+    // Add event listener to the purchased button
+    itemPurchase.addEventListener('click', () => {
+        itemText.style.textDecoration = 'line-through';
+    });
+});

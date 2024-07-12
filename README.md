@@ -14,7 +14,7 @@ This shopping list is developed with HTML,CSS and Javascript.It allows users to 
 
 ## Learning essentials
 
-- Practice using iteration,acess and manipulate list items.
+- Practice using iteration,access and manipulate list items.
 - Practice and gain experience on the DOM.
 - Be conversant with event listeners and interactive applications.
 
