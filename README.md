@@ -9,8 +9,6 @@ This shopping list is developed with HTML,CSS and Javascript.It allows users to 
 - Delete the items.
 
 
-![alt text](image-1.png)
-
 
 ## Learning essentials
 
