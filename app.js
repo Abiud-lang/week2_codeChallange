@@ -22,7 +22,7 @@ button.addEventListener('click', () => {
 
     list.appendChild(itemList);
 
-    // Clear the input
+    
     input.value = '';
 
     // Add event listener to the delete button
