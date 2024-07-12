@@ -25,7 +25,7 @@ button.addEventListener('click', () => {
     
     input.value = '';
 
-    // Add event listener to the delete button
+   
     itemDelete.addEventListener('click', () => {
         list.removeChild(itemList);
     });
