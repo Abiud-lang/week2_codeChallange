@@ -30,7 +30,7 @@ button.addEventListener('click', () => {
         list.removeChild(itemList);
     });
 
-    // Add event listener to the purchased button
+    
     itemPurchase.addEventListener('click', () => {
         itemText.style.textDecoration = 'line-through';
     });
