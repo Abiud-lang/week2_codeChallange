@@ -2,9 +2,10 @@ const list = document.querySelector('ul');
 const input = document.querySelector('input');
 const button = document.querySelector('button');
 
+
 button.addEventListener('click', () => {
     const newItem = input.value;
-    if (newItem === '') return; // Do nothing if the input is empty
+     (newItem === '') ; 
 
     const itemList = document.createElement('li');
 
@@ -14,15 +15,22 @@ button.addEventListener('click', () => {
 
     const itemDelete = document.createElement('button');
     itemDelete.textContent = 'Delete';
+    itemDelete.className = 'delete-button';
     itemList.appendChild(itemDelete);
 
     const itemPurchase = document.createElement('button');
     itemPurchase.textContent = 'Purchased';
+    itemPurchase.className = 'purchase-button'
     itemList.appendChild(itemPurchase);
+
+    const clearButton = document.createElement('button');
+    clearButton.textContent = 'Clear';
+    clearButton.className = 'clear-button'
+    itemList.appendChild(clearButton);
 
     list.appendChild(itemList);
 
-    
+
     input.value = '';
 
    
@@ -34,4 +42,10 @@ button.addEventListener('click', () => {
     itemPurchase.addEventListener('click', () => {
         itemText.style.textDecoration = 'line-through';
     });
+
+    clearButton.addEventListener('click', () => {
+        list.innerHTML= '';
+    });
+
+
 });
